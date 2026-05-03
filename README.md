@@ -42,12 +42,3 @@ This module dives deeper into standard cell details and how a synthesizer handle
 | **GTKWave** | Graphical waveform viewer utilized to observe signal transitions from simulation dump files. |
 | **Yosys** | The primary open-source framework used for RTL-to-gate-level logic synthesis. |
 | **Sky130 PDK** | The 130nm open-source standard cell library used to physically map the synthesized logic. |
-
----
-
-## What I Gained
-
-- A practical, hands-on understanding of how the RTL to gate-level transformation occurs.
-- The ability to confidently write stimulus testbenches and debug functional discrepancies using GTKWave.
-- Insight into how synthesis tools interpret constraints and choose specific cell flavors to meet performance needs.
-- A foundational understanding of static timing constraints (setup and hold times) and why varied cell delays are crucial for a functional chip.
