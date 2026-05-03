@@ -1,4 +1,4 @@
-# RTL Design and Synthesis – VLSI Internship Work
+# RTL Design and Synthesis – VSD Intern Screening
 
 **Submitted by:** Atharv Priyansh  
 **Date:** 2026-05-03  
