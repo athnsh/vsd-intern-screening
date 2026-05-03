@@ -1,0 +1,19 @@
+# Compiled simulation outputs
+*.out
+*.vvp
+
+# VCD waveform dumps (can be large)
+*.vcd
+
+# Yosys intermediate files
+*.blif
+*.edif
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
