@@ -88,3 +88,108 @@ Using the `flatten` command removes the sub-module boundaries.
 ![Image](../screenshots/Pasted%20image%2020260503203836.png)
 ![Image](../screenshots/Pasted%20image%2020260503203944.png)
 Now `show` will display the design in flat mode, exposing all gates instead of sub-modules.
+
+## 3. Various Flop Coding Styles
+
+## 3.1 D Flip‑Flop with Asynchronous Reset
+
+**Verilog Code:**
+```verilog
+module dff_asyncres (
+    input clk,
+    input d,
+    input async_reset,
+    output reg q
+);
+    always @(posedge clk, posedge async_reset) begin
+        if (async_reset) q <= 1'b0;
+        else q <= d;
+    end
+endmodule
+```
+
+**Synthesis Diagram:** ![[Pasted image 20260503214104.png]]
+
+---
+
+## 3.2 D Flip‑Flop with Asynchronous Set
+
+**Verilog Code:**
+```verilog
+module dff_async_set (
+    input clk,
+    input d,
+    input async_set,
+    output reg  q
+);
+    always @(posedge clk, posedge async_set) begin
+        if (async_set) q <= 1'b1;
+        else q <= d;
+    end
+endmodule
+```
+
+**Synthesis Diagram:** ![[Pasted image 20260503214011.png]]
+
+---
+
+## 3.3 D Flip‑Flop with Synchronous Reset
+
+**Verilog Code:**
+```verilog
+module dff_syncres (
+    input clk,
+    input d,
+    input sync_rst,
+    output reg q
+);
+    always @(posedge clk ) begin
+        if (sync_reset) q <= 1'b0;
+        else q <= d;
+    end
+endmodule
+```
+
+**Waveform:** reset has higher priority than input (`syncresdff_reshigh_priority`)
+
+**Synthesis Diagram:** ![[Pasted image 20260503213900.png]]
+
+---
+
+## 3.4 Observations
+
+- Asynchronous reset/set works independent of the clock.
+- Synchronous reset depends on the clock edge.
+- Different coding styles lead to different standard cells after synthesis.
+- Choosing the proper coding style is important for timing and optimization.
+
+---
+
+## 3.5 Technology Mapping (DFF Mapping)
+
+`dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80` – mapping library used during synthesis.
+
+# 4. Optimisations
+
+## 4.1 Theory – mul2 vs mult8
+
+### mul2 Design
+
+- Simple combinational circuit that multiplies an input by 2.
+- Implemented as a left shift (`y = a << 1`).
+- Very efficient – minimal logic, often just wiring.
+- Synthesizes into simple gates or direct wiring.
+
+### mult8 Design
+
+- Slightly more complex circuit that multiplies an input by 8.
+- Implemented as a left shift (`y = a << 3`).
+- When written with extra modules or intermediate signals, synthesis tools can heavily optimise the logic.
+- Demonstrates how redundant logic is removed during synthesis.
+
+---
+
+## 4.2 mul2 & mult8 Snapshots
+
+- **mul2:** ![[Pasted image 20260503213715.png]]
+- **mult8:** ![[Pasted image 20260503213727.png]]
