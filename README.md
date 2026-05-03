@@ -2,7 +2,7 @@
 
 **Submitted by:** Athar  
 **Date:** 2026-05-03  
-**Program:** VSD FPGA Internship Screening (NASSCOM VSD)
+**Program:** VSD FPGA Internship Screening
 
 ---
 
