@@ -1,10 +1,12 @@
 # RTL Design and Synthesis – VLSI Internship Work
 
-**Submitted by:** Athar  
+**Submitted by:** Atharv Priyansh  
 **Date:** 2026-05-03  
 **Program:** VSD FPGA Internship Screening
 
-**Core Technologies:** Verilog | Iverilog | GTKWave | Yosys | Sky130 PDK
+[![Tools](https://img.shields.io/badge/Tools-iverilog%20%7C%20GTKWave%20%7C%20Yosys-blue)](https://github.com/athnsh/vsd-intern-screening)
+[![PDK](https://img.shields.io/badge/PDK-SkyWater%20130nm-green)](https://github.com/athnsh/vsd-intern-screening)
+[![HDL](https://img.shields.io/badge/HDL-Verilog-red)](https://github.com/athnsh/vsd-intern-screening)
 
 ---
 
