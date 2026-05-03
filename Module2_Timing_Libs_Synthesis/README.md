@@ -108,7 +108,7 @@ module dff_asyncres (
 endmodule
 ```
 
-**Synthesis Diagram:** ![[Pasted image 20260503214104.png]]
+**Synthesis Diagram:** ![Image](../screenshots/Pasted%20image%2020260503214104.png)
 
 ---
 
@@ -129,7 +129,7 @@ module dff_async_set (
 endmodule
 ```
 
-**Synthesis Diagram:** ![[Pasted image 20260503214011.png]]
+**Synthesis Diagram:** ![Image](../screenshots/Pasted%20image%2020260503214011.png)
 
 ---
 
@@ -152,7 +152,7 @@ endmodule
 
 **Waveform:** reset has higher priority than input (`syncresdff_reshigh_priority`)
 
-**Synthesis Diagram:** ![[Pasted image 20260503213900.png]]
+**Synthesis Diagram:** ![Image](../screenshots/Pasted%20image%2020260503213900.png)
 
 ---
 
@@ -191,5 +191,5 @@ endmodule
 
 ## 4.2 mul2 & mult8 Snapshots
 
-- **mul2:** ![[Pasted image 20260503213715.png]]
-- **mult8:** ![[Pasted image 20260503213727.png]]
+- **mul2:** ![Image](../screenshots/Pasted%20image%2020260503213715.png)
+- **mult8:** ![Image](../screenshots/Pasted%20image%2020260503213727.png)
